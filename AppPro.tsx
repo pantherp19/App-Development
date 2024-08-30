@@ -8,13 +8,14 @@ import {
 } from 'react-native';
 
 export default function AppPro(): JSX.Element {
+  const colorScheme = useColorScheme();
   const isDark = useColorScheme() === 'dark';
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={isDark ? styles.whiteText : styles.darkText}>
-          Hello World
+          useColorScheme(): {colorScheme}
         </Text>
       </View>
     </SafeAreaView>
